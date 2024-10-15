@@ -1,0 +1,83 @@
+# 1. Mengevaluasi kinerja siswa berdasarkan nilai persentase yang dimasukkan
+percentage = float(input("Masukkan persentase siswa: "))
+
+# Mengecek persentase dan memberikan hasil penilaian kinerja
+if percentage >= 90:
+    print("Kinerja Siswa: excellent performance")
+elif percentage >= 80:
+    print("Kinerja Siswa: very Good performance")
+elif percentage >= 70:
+    print("Kinerja Siswa: good performance")
+elif percentage >= 60:
+    print("Kinerja Siswa: average performance")
+else:
+    print("Kinerja Siswa: fix it again")
+# Program mengevaluasi apakah persentase >= 90, >= 80, >= 70, >= 60 atau kurang dari 60, 
+# dan mencetak hasil penilaian sesuai kondisi tersebut.
+
+
+# 2. Mencari angka terbesar dari tiga bilangan
+def find_largest(num1, num2, num3):
+    # Membandingkan ketiga angka dan mengembalikan angka terbesar
+    if num1 >= num2 and num1 >= num3:
+        return num1
+    elif num2 >= num1 and num2 >= num3:
+        return num2
+    else:
+        return num3
+
+# Meminta input tiga angka dari pengguna
+num1 = float(input("membuka no 1: "))
+num2 = float(input("membuka no 2: "))
+num3 = float(input("membuka no 3: "))
+
+# Memanggil fungsi untuk menemukan angka terbesar dan mencetak hasilnya
+largest = find_largest(num1, num2, num3)
+print(f"no paling besar adalah: {largest}")
+# Program memeriksa mana dari ketiga angka yang terbesar dan mencetaknya.
+
+
+# 3. Mencetak deret Fibonacci hingga nilai n
+def fibonacci_up_to_n(n):
+    # Memulai dengan dua angka pertama dalam deret Fibonacci (0 dan 1)
+    a, b = 0, 1
+    # Loop untuk mencetak angka Fibonacci selama nilainya <= n
+    while a <= n:
+        print(a, end=" ")
+        a, b = b, a + b  # Memperbarui nilai untuk angka Fibonacci berikutnya
+    print()  # Membuat baris baru setelah selesai mencetak deret
+
+# Meminta input nilai n dari pengguna
+n = int(input("Masukkan nilai n: "))
+fibonacci_up_to_n(n)
+# Program mencetak deret Fibonacci hingga angka terbesar yang kurang dari atau sama dengan n.
+
+
+# 4. Mencetak bilangan ganjil hingga n
+def print_odd_numbers(n):
+    # Menggunakan loop dengan langkah 2 untuk mencetak bilangan ganjil
+    for i in range(1, n + 1, 2):
+        print(i, end=" ")
+    print()  # Membuat baris baru setelah selesai mencetak bilangan ganjil
+
+# Meminta input nilai n dari pengguna
+n = int(input("masukkan angka: "))
+print_odd_numbers(n)
+# Program mencetak semua bilangan ganjil dari 1 hingga n.
+
+
+# 5. Mencetak pola angka bertingkat
+def print_number_pattern(n):
+    # Loop luar untuk menentukan baris
+    for i in range(1, n + 1):
+        
+        # Loop dalam untuk mencetak angka i sebanyak i kali pada setiap baris
+        for j in range(i):
+            print(i, end=" ")
+        print()  # Membuat baris baru setelah selesai mencetak baris saat ini
+
+# Meminta input nilai n dari pengguna
+n = int(input("Masukkan nilai n: "))
+print_number_pattern(n)
+# Program mencetak pola bertingkat, di mana angka i dicetak sebanyak i kali pada setiap baris.
+ 
